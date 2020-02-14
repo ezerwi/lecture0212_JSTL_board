@@ -28,6 +28,9 @@ public class BoardDeleteServlet extends HttpServlet {
 		dao = new DAO();
 		m = new Model();
 		m.set_idx(Integer.parseInt(request.getParameter("idx")));
+		m.set_pageNum(request.getParameter("pageNum"));
+		m.set_searchType(request.getParameter("searchType"));
+		m.set_searchText(request.getParameter("searchText"));
 		
 		RequestDispatcher rd = request.getRequestDispatcher("/board/delete_check.jsp");
 		request.setAttribute("m", m);
