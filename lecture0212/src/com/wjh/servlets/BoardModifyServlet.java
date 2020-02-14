@@ -60,7 +60,7 @@ public class BoardModifyServlet extends HttpServlet {
 		
 		boolean status = dao.modify(m);
 		
-		if(status==true) response.sendRedirect("view?idx="+m.get_idx()+"&pageNum="+m.get_pageNum()"&searchType="+m.get_searchType()+"&searchText="+m.get_searchText());
+		if(status==true) response.sendRedirect("view?idx="+m.get_idx()+"&pageNum="+m.get_pageNum()+"&searchType="+m.get_searchType()+"&searchText="+m.get_searchText());
 		else response.sendRedirect("error.jsp");
 	}
 
